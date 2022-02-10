@@ -9,7 +9,7 @@ const App = () => {
     <ThemeContextConsumer>
       {(context) => (
         <div>
-          <Comp1 theme={context.theme} toggleTheme={context.toggleTheme} />
+          <Comp1 theme={context.theme} />
           <Button />
         </div>
       )}

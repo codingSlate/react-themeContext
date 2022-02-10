@@ -1,23 +1,25 @@
 import React, { Component, useContext } from 'react';
 import PropTypes from 'prop-types';
-import {ThemeContextConsumer} from './ThemeContext'
+import { ThemeContextConsumer } from './ThemeContext';
 
-const Button = ({ theme, toggleTheme }) => {
-  const ctx = useContext(ThemeContextConsumer)
-  console.log('Button ', toggleTheme, theme);
+const Button = () => {
   return (
-    <div className={`btn ${ctx.theme}`} onClick={ctx.toggleTheme}>
-      Switch Theme
-    </div>
+    <ThemeContextConsumer>
+      {({ theme,toggleTheme }) => (
+        <div className={theme.mode} onClick={toggleTheme}>
+          Switch Theme {theme.mode} 
+        </div>
+      )}
+    </ThemeContextConsumer>
   );
 };
 
 Button.propTypes = {
-  theme: PropTypes.oneOf(['light', 'dark']),
+  mode: PropTypes.oneOf(['light', 'dark']),
 };
 
 Button.defaultProps = {
-  theme: 'light',
+  mode: 'light',
 };
 
 // class Button extends Component {

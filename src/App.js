@@ -7,10 +7,10 @@ import Comp1 from './Comp1';
 const App = () => {
   return (
     <ThemeContextConsumer>
-      {(theme) => (
+      {(context) => (
         <div>
-          <Comp1 theme={theme} />
-          <Button theme={'dark'} />
+          <Comp1 theme={context.theme} toggleTheme={context.toggleTheme} />
+          <Button />
         </div>
       )}
     </ThemeContextConsumer>

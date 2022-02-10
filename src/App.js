@@ -1,19 +1,19 @@
 import React from 'react';
 import './style.css';
 import Button from './Button';
-import ThemeContext from './ThemeContext';
+import { ThemeContextConsumer } from './ThemeContext';
 import Comp1 from './Comp1';
 
 const App = () => {
   return (
-    <ThemeContext.Consumer>
+    <ThemeContextConsumer>
       {(theme) => (
         <div>
           <Comp1 theme={theme} />
           <Button theme={'dark'} />
         </div>
       )}
-    </ThemeContext.Consumer>
+    </ThemeContextConsumer>
   );
 };
 

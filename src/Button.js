@@ -3,6 +3,7 @@ import ThemeContext from './ThemeContext';
 import PropTypes from 'prop-types';
 
 const Button = ({theme}) => {
+  console.log("Button ", theme)
   return <div className={`btn ${theme}`}>Switch Theme</div>;
 };
 

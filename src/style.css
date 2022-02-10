@@ -12,10 +12,12 @@ p {
   margin-bottom: 15px;
 }
 
+.btn.light,
 .light {
   background-color: rgb(238, 238, 238);
   color: rgb(7, 7, 7);
 }
+.btn.dark,
 .dark {
   background-color: rgb(44, 44, 44);
   color: rgb(238, 238, 238);

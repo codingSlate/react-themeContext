@@ -2,17 +2,15 @@ import React from 'react';
 import './style.css';
 import Button from './Button';
 import ThemeContext from './ThemeContext';
+import Comp1 from './Comp1';
 
 const App = () => {
   return (
     <ThemeContext.Consumer>
       {(theme) => (
         <div>
-          <div className={theme}>
-            <h1>Hello StackBlitz!</h1>
-            <p>Start editing to see some magic happen :) {theme} theme</p>
-          </div>
-          <Button />
+          <Comp1 theme={theme} />
+          <Button theme={'dark'} />
         </div>
       )}
     </ThemeContext.Consumer>

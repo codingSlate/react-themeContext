@@ -9,7 +9,7 @@ const Comp1 = ({ theme }) => {
         <p>Start editing to see some magic happen :) {theme.mode} theme</p>
       </div>
       <Button />
-      <Button />
+
     </>
   );
 };
